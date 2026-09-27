@@ -86,8 +86,7 @@ def inference(config):
         full_volume_np, in_range=(v_min, v_max), out_range=(0, 255)
     ).astype(np.uint8)
 
-    img_rescaled = gaussian_filter(img_rescaled, sigma=1)
-
+    #img_rescaled = gaussian_filter(img_rescaled, sigma=1)
     affine = np.eye(4)
     nifti_img = nib.Nifti1Image(img_rescaled, affine)
 
